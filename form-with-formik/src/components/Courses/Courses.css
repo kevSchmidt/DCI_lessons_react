@@ -1,0 +1,46 @@
+.item-list {
+  width: 85%;
+  margin: 4rem auto;
+}
+
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  margin: 1rem auto;
+}
+
+.search__form {
+  width: 70%;
+  height: 2.3rem;
+  display: flex;
+  align-items: center;
+}
+
+.search__input {
+  width: 100%;
+  padding: 1.2rem 0 1.2rem 0.7rem;
+  font-size: 1.3rem;
+  box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.4);
+  border: none;
+  border-radius: 3px;
+  transition: all 0.4s;
+  margin-right: 1.2rem;
+}
+
+.no-item-found:focus {
+  outline: 2px solid red;
+}
+
+.item-found:focus {
+  outline: none;
+}
+
+.sort__input {
+  height: 80%;
+  margin-right: 1.2rem;
+}
+
+.order__input {
+  height: 80%;
+}
