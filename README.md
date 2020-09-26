@@ -9,7 +9,8 @@
 
 --------------------------------------------------------------------------------
 5. create React App from scratch 
-First step
+
+First step:
 ```
 $ npm init
 ```
@@ -17,15 +18,15 @@ or you can use the default initial by using
 ```
 $ npm init -y
 ```
-then you need to install some packages 
+Install some packages :
 ```
 $ npm i react
 $ npm i react-dom
 $ npm i react-scripts
 $ npm i node-sass --save
 ```
-for sure you need to create **.gitignore** and then create folders (src, public)
-so your directory should look like
+Create **.gitignore** and then folders (src, public)
+Your directory should look like:
 ```
 Project
 │   README.md
@@ -34,14 +35,15 @@ Project
 └───public
 │   └───index.html
 └───src
-    │   index.js
-    └───js
-    |   └───App.js
+    │   
+    └───index.js
+    └───App.js
+    └───components
     └───scss
         └───main.scss
    
 ```
-Remember to add the important scripts to your __package.json__
+Remember to add the scripts to your __package.json__
 ```
   "scripts": {
     "start": "react-scripts start",
