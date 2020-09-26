@@ -1,4 +1,4 @@
-# Form with Formik && Yup library
+# Form with Formik && Yup
 
 ### Tools:
 
