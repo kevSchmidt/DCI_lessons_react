@@ -12,7 +12,7 @@ const displayCourses = (state = initState, action) => {
   return state;
 };
 
-// ---- reducer compilation ----
+// ---- reducers compilation ----
 export default combineReducers({
   displayCourses,
 });
