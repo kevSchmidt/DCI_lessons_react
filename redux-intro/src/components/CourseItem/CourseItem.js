@@ -1,10 +1,11 @@
 import React from "react";
+import { connect } from "react-redux";
+
+import { addSavedItem } from "../../actions/index";
 
 import "./CourseItem.css";
 
-const CourseItem = (props) => {
-  const course = props.course;
-
+const CourseItem = ({ course, addSavedItem }) => {
   return (
     <div className="course">
       {/* ---- image ---- */}
@@ -26,8 +27,12 @@ const CourseItem = (props) => {
       <span className={course.isHot ? "course__status" : ""}>
         {course.isHot ? "Hot" : null}
       </span>
+      <span className="add" onClick={() => addSavedItem(course)}>
+        Add
+      </span>
     </div>
   );
 };
 
-export default CourseItem;
+// ---- connect component with redux ----
+export default connect(null, { addSavedItem })(CourseItem);

@@ -6,6 +6,7 @@ import data from "../data/courses.json";
 const initState = {
   courses: data,
   inputSearch: "",
+  saved: [],
 };
 
 // ---- reducers ----
@@ -20,7 +21,18 @@ const displayCourses = (state = initState, action) => {
   return state;
 };
 
+const savedList = (state = initState, action) => {
+  if (action.type === "ADD_ITEM") {
+    return {
+      ...state,
+      saved: [...state.saved, action.payload],
+    };
+  }
+  return state;
+};
+
 // ---- reducers compilation ----
 export default combineReducers({
   displayCourses,
+  savedList,
 });

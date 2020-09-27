@@ -27,6 +27,8 @@ const CourseList = ({ courses, inputSearch }) => {
 
 // ---- connect component with redux ----
 const getCoursesFromStore = (state) => {
+  console.log(state);
+
   return {
     courses: state.displayCourses.courses,
     inputSearch: state.displayCourses.inputSearch,
