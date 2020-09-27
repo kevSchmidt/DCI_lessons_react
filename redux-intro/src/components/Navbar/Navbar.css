@@ -1,0 +1,21 @@
+.header__nav {
+  width: 80%;
+  margin: 2rem auto;
+  display: flex;
+}
+
+.header__list {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.header__item {
+  margin: 0 1.2rem;
+}
+
+.header__link {
+  text-decoration: none;
+  color: #000;
+}

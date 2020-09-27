@@ -5,7 +5,7 @@ import { searchCourses } from "../../actions/index";
 
 import "./CourseForm.css";
 
-const CourseForm = ({ searchCourses }) => {
+const CourseForm = ({ searchCourses, inputSearch }) => {
   return (
     <form className="search__form">
       <input
@@ -13,10 +13,17 @@ const CourseForm = ({ searchCourses }) => {
         placeholder="Search for courses.."
         className="search__input"
         onChange={(e) => searchCourses(e.target.value)}
+        value={inputSearch}
       />
     </form>
   );
 };
 
 // ---- connect component with redux ----
-export default connect(null, { searchCourses })(CourseForm);
+const getInputSearchFromStore = (state) => {
+  return {
+    inputSearch: state.displayCourses.inputSearch,
+  };
+};
+
+export default connect(getInputSearchFromStore, { searchCourses })(CourseForm);

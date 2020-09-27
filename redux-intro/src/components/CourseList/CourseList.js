@@ -6,14 +6,18 @@ import CourseForm from "../CourseForm/CourseForm";
 
 import "./CourseList.css";
 
-const CourseList = ({ courses }) => {
+const CourseList = ({ courses, inputSearch }) => {
+  const filteredCourses = courses.filter((course) =>
+    course.title.toLowerCase().includes(inputSearch.toLowerCase())
+  );
+
   return (
     <React.Fragment>
       <CourseForm />
       <div className="courses">
-        {courses.length === 0
+        {filteredCourses.length === 0
           ? "not items found"
-          : courses.map((course) => (
+          : filteredCourses.map((course) => (
               <CourseItem key={course.id} course={course} />
             ))}
       </div>
@@ -25,6 +29,7 @@ const CourseList = ({ courses }) => {
 const getCoursesFromStore = (state) => {
   return {
     courses: state.displayCourses.courses,
+    inputSearch: state.displayCourses.inputSearch,
   };
 };
 
