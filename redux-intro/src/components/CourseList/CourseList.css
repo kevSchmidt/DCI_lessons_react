@@ -1,0 +1,13 @@
+.courses {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: 1rem auto;
+}
+
+.noItems {
+  color: red;
+  font-size: 2rem;
+  text-align: center;
+  margin: 3rem 0;
+}
