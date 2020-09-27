@@ -17,7 +17,6 @@ const displayCourses = (state = initState, action) => {
       inputSearch: action.payload,
     };
   }
-
   return state;
 };
 
@@ -26,6 +25,11 @@ const savedList = (state = initState, action) => {
     return {
       ...state,
       saved: [...state.saved, action.payload],
+    };
+  } else if (action.type === "REMOVE_ITEM") {
+    return {
+      ...state,
+      saved: state.saved.filter((item) => item.id !== action.payload),
     };
   }
   return state;
