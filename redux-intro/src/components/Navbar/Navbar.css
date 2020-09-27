@@ -13,9 +13,20 @@
 
 .header__item {
   margin: 0 1.2rem;
+  position: relative;
 }
 
 .header__link {
   text-decoration: none;
   color: #000;
+}
+
+.saved__count {
+  background-color: pink;
+  border-radius: 50%;
+  padding: 0.2rem 0.5rem;
+  position: absolute;
+  top: -1.1rem;
+  left: -1.1rem;
+  color: #fff;
 }

@@ -10,7 +10,7 @@ const SavedList = ({ saved }) => {
   return (
     <div>
       {saved.length === 0 ? (
-        <div>no item have been saved yet!</div>
+        <div>Oups! Sorry, no item have been saved yet!</div>
       ) : (
         <div className="saved__items">
           {saved.map((savedItem) => (

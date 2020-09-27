@@ -1,11 +1,11 @@
 import React from "react";
 import { connect } from "react-redux";
 
-import { addSavedItem } from "../../actions/index";
+import { addSavedItem, removeSavedItem } from "../../actions/index";
 
 import "./CourseItem.css";
 
-const CourseItem = ({ course, addSavedItem }) => {
+const CourseItem = ({ course, addSavedItem, saved, removeSavedItem }) => {
   return (
     <div className="course">
       {/* ---- image ---- */}
@@ -27,12 +27,39 @@ const CourseItem = ({ course, addSavedItem }) => {
       <span className={course.isHot ? "course__status" : ""}>
         {course.isHot ? "Hot" : null}
       </span>
-      <span className="add" onClick={() => addSavedItem(course)}>
-        Add
+
+      {/* ---- saved item icon ---- */}
+      <span
+        className="add"
+        onClick={
+          saved.includes(course)
+            ? () => removeSavedItem(course.id)
+            : () => addSavedItem(course)
+        }
+      >
+        {saved.includes(course) ? (
+          <img
+            src="https://img.icons8.com/dusk/50/000000/bookmark-ribbon.png"
+            alt="bookmark"
+          />
+        ) : (
+          <img
+            src="https://img.icons8.com/wired/50/000000/bookmark-ribbon.png"
+            alt="bookmark"
+          />
+        )}
       </span>
     </div>
   );
 };
 
 // ---- connect component with redux ----
-export default connect(null, { addSavedItem })(CourseItem);
+const getSavedFromStore = (state) => {
+  return {
+    saved: state.savedList.saved,
+  };
+};
+
+export default connect(getSavedFromStore, { addSavedItem, removeSavedItem })(
+  CourseItem
+);

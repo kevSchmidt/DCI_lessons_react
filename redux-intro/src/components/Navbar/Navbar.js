@@ -1,9 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
 
 import "./Navbar.css";
 
-const Navbar = () => {
+const Navbar = ({ saved }) => {
   return (
     <div>
       <nav className="header__nav">
@@ -27,6 +28,7 @@ const Navbar = () => {
           </li>
 
           <li className="header__item">
+            <span className="saved__count">{saved.length}</span>
             <Link className="header__link" to="/saved">
               Saved
             </Link>
@@ -37,4 +39,11 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+// ----- connect component with redux ----
+const getSavedItems = (state) => {
+  return {
+    saved: state.savedList.saved,
+  };
+};
+
+export default connect(getSavedItems)(Navbar);

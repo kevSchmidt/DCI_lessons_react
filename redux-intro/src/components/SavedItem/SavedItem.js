@@ -34,7 +34,10 @@ const SavedItem = ({ savedItem, removeSavedItem }) => {
         className="remove__item"
         onClick={() => removeSavedItem(savedItem.id)}
       >
-        Remove
+        <img
+          src="https://img.icons8.com/flat_round/64/000000/delete-sign.png"
+          alt="delete icon"
+        />
       </span>
     </div>
   );
