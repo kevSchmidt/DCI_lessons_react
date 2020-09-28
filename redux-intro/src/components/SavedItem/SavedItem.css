@@ -18,7 +18,7 @@
 
 .saved__title {
   font-size: 1.1rem;
-  margin: 1rem 0 0.5rem 0;
+  margin: 1rem 0 0.5rem 0.6rem;
 }
 
 .m-left--saved {
@@ -28,6 +28,7 @@
 .saved__author {
   display: block;
   font-size: 0.8rem;
+  margin-left: 0.6rem;
 }
 
 .saved__price {

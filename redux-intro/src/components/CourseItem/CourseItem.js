@@ -19,7 +19,7 @@ const CourseItem = ({ course, addSavedItem, saved, removeSavedItem }) => {
       </div>
 
       {/* ---- information --- */}
-      <Link to={`/courses/${course.id}`}>
+      <Link className="course__link" to={`/courses/${course.id}`}>
         <h3 className="course__title m-left">{course.title}</h3>
       </Link>
       <span className="course__author m-left">By: {course.author}</span>

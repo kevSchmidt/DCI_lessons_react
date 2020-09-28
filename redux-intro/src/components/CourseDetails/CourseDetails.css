@@ -1,75 +1,79 @@
 .course__details {
-    width: 80%;
-    margin: 4rem auto;
-    display: flex;
-    box-shadow: 2px 2px 4px rgba(0, 0, 0, .6);
+  width: 80%;
+  margin: 4rem auto;
+  display: flex;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
 }
 
-
 .img__container--d {
-    width: 50%;
+  width: 50%;
 }
 
 .course__img--d {
-    width: 100%;
-    display: block;
+  width: 100%;
+  display: block;
 }
 
-
 .course__content--d {
-    width: 50%;
-    background-color: #222;
-    padding-left: 1.4rem;
-    position: relative;
+  width: 50%;
+  background-color: lightblue;
+  padding-left: 1.4rem;
+  position: relative;
 }
 
 .course__status--d {
-    position: absolute;
-    top: 0;
-    right: 0;
-    padding: .6rem .9rem;
-    background-color: #fff;
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0.6rem 0.9rem;
+  background-color: #fff;
 }
 
 .course__title--d {
-    color: #fff;
-    font-size: 1.6rem;
-    margin: 4rem 0 .6rem 0;
+  color: #fff;
+  font-size: 1.6rem;
+  margin: 4rem 0 0.6rem 0;
 }
 
 .course__desc--d {
-    color: #999;
-    line-height: 1.6;
-    font-size: .9rem;
+  color: #111;
+  line-height: 1.6;
+  font-size: 0.9rem;
 }
 
 .course__price--d {
-    position: absolute;
-    bottom: 1rem;
-    right: 1rem;
-    color: #fff;
-    font-size: 1.8rem;
-    font-weight: 600;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  color: #fff;
+  font-size: 1.8rem;
+  font-weight: 600;
 }
 
 .catigories--d {
-    position: absolute;
-    bottom: 1rem;
-    left: 1rem;
-    display: flex;
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
 }
 
 .catigories--d p {
-    margin-right: 1rem;
-    background-color: #fff;
-    padding: .5rem 1rem;
+  margin-right: 1rem;
+  background-color: #fff;
+  border-radius: 50%;
+  padding: 0.5rem 1rem;
 }
 
-
 .course__students--d {
-color: #fff;
+  color: #111;
 }
 
 .course__date--d {
-    color: #999;
+  color: #111;
+}
+
+.course__saved--d {
+  position: absolute;
+  top: 0.4rem;
+  left: 0.6rem;
 }
