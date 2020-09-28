@@ -1,5 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 
 import { addSavedItem, removeSavedItem } from "../../actions/index";
 
@@ -18,7 +19,9 @@ const CourseItem = ({ course, addSavedItem, saved, removeSavedItem }) => {
       </div>
 
       {/* ---- information --- */}
-      <h3 className="course__title m-left">{course.title}</h3>
+      <Link to={`/courses/${course.id}`}>
+        <h3 className="course__title m-left">{course.title}</h3>
+      </Link>
       <span className="course__author m-left">By: {course.author}</span>
       <div className="course__price">
         <span className="price__number">{course.price}</span>
