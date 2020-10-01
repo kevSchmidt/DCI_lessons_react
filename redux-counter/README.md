@@ -8,7 +8,7 @@
 </h1>
 
 ### Preview:
-![](./readme-ing/preview.png)
+![](./readme-img/preview.png)
 
 ### Structure:
 ```
