@@ -1,4 +1,36 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Counter with redux
+
+### Tools:
+
+<h1>
+<img src="https://imgur.com/T1TApg1.png" alt="React" width="20%">
+<img src="https://imgur.com/fZuu2v0.png" alt="React" width="10%">
+</h1>
+
+### Preview:
+![](./readme-ing/preview.png)
+
+### Structure:
+```
+Project
+│   README.md
+│   package.json
+|   package-lock.json
+|
+└─── public
+│      │
+│      └─── index.html
+|
+|
+|
+└─── src
+      └─── index.js
+      └─── App.js
+      └─── actions
+      └─── reducers
+
+
+```
 
 ## Available Scripts
 
